@@ -78,11 +78,11 @@
 						echo"<th> </th></tr></thead>";
 					if (isset($_POST['cri'])) {
 					$cari = mysql_real_escape_string ($_POST['cari']);
-						$query = "SELECT * FROM tbl_barang where nama_barang like '%".$cari."%' order by kode_barang";
+						$query = "SELECT * FROM `tbl_barang` where nama_barang like '%".$cari."%' order by kode_barang";
 					
 					}
 					else{
-						$query = "SELECT * FROM tbl_barang order by kode_barang";
+						$query = "SELECT * FROM `tbl_barang` order by kode_barang";
 					
 					}
 						$sql = mysqli_query ($query);
